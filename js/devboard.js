@@ -81,3 +81,9 @@ document
   .addEventListener("click", function () {
     document.getElementById("task-completed-history").innerHTML = "";
   });
+
+document
+  .getElementById("discover-something-new")
+  .addEventListener("click", function () {
+    window.location.href = "../blog.html";
+  });

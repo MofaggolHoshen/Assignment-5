@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="container mx-auto font-poppins bg-[rgb(244_247_255)]">
+    <header class="bg-white rounded-2xl my-6 p-6">
+      <nav class="flex justify-between">
+        <div class="flex items-center gap-2">
+          <img class="w-12 h-12" src="assets/logo.png" alt="" />
+          <h1 class="text-4xl">Dev<span class="font-bold">Board</span></h1>
+        </div>
+        <button
+          class="py-2 px-4 font-medium text-white bg-[#3752FD] rounded-lg"
+          onclick="window.location.href = '../index.html'"
+        >
+          Back to Desk
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="">
+        <h1 class="text-center font-bold text-lg mb-4">Blogs</h1>
+        <!-- Question - 1 & Answer -->
+        <div class="bg-white rounded-md mb-3">
+          <h2 class="p-3 font-bold">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h2>
+          <hr class="border border-dashed" />
+          <div class="p-3">
+            <p>There are some way to select an element for example -</p>
+            <ol class="list-decimal pl-6">
+              <li>getElementById()</li>
+              <li>getElementsByClassName()</li>
+              <li>getElementsByTagName()</li>
+              <li>querySelector()</li>
+              <li>querySelectorAll()</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Question - 2 & Answer -->
+        <div class="bg-white rounded-md mb-3">
+          <h2 class="p-3 font-bold">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </h2>
+          <hr class="border border-dashed" />
+          <p class="p-3">
+            <span class="font-bold">innerHTML:</span> It returns all content
+            with HTML. <br />
+            <span class="font-bold">innerText:</span> It returns only human
+            readable text which are visible in browser, is considering css
+            style.<br />
+            <span class="font-bold">textContent:</span> It returns every element
+            in the node, does not consider css style.
+          </p>
+        </div>
+
+        <!-- Question - 3 & Answer -->
+        <div class="bg-white rounded-md mb-3">
+          <h2 class="p-3 font-bold">
+            Question-3: What is event delegation in the DOM?
+          </h2>
+          <hr class="border border-dashed" />
+          <p class="p-3">
+            It's a technic where a event listener is added in parent element, it
+            can handle if a event trigger in child.
+          </p>
+        </div>
+
+        <!-- Question - 4 & Answer -->
+        <div class="bg-white rounded-md mb-3">
+          <h2 class="p-3 font-bold">
+            Question-4: What is event bubbling in the DOM?
+          </h2>
+          <hr class="border border-dashed" />
+          <p class="p-3">
+            When a event has been triggered in child, parent event has been
+            triggered as well.
+          </p>
+        </div>
+
+        <!-- Question - 5 & Answer -->
+        <div class="bg-white rounded-md mb-3">
+          <h2 class="p-3 font-bold">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h2>
+          <hr class="border border-dashed" />
+          <div class="p-3">
+            <code>
+              let newDiv = document.createElement("div"); // Create new element
+              <br />
+              newDiv.innerText = "Hello, I am new!"; // Set innerTest <br />
+              document.body.appendChild(newDiv); // Add/Append in body element
+              <br />
+              document.body.removeChild(newDiv); // Remove
+            </code>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
